@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/logo.png" />
+
+    <!--google fonts links-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!--end of google font links-->
+
+    <script
+      src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js"
+      type="module"
+    ></script>
+
+    <link
+      href="{{url_for('static',filename='stylesheet.css')}}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <title>Space Travelers</title>
+  </head>
+
+  <body class="home">
+    <header class="primary-header flex">
+      <div>
+        <img
+          src="{{url_for('static',filename='logo.png')}}"
+          alt="logo"
+          class="logo"
+        />
+      </div>
+      <button class="mobile-nav-toggle" aria-controls="primary-navigation">
+        <span class="sr-only" aria-expanded="false">Menu</span>
+      </button>
+      <nav>
+        <ul
+          id="primary-navigation"
+          data-visible="false"
+          class="primary-navigation underline-indicators flex"
+        >
+          <li class="active">
+            <a
+              class="ff-sans-cond uppercase text-white letter-spacing-2"
+              href="index.html"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              class="ff-sans-cond uppercase text-white letter-spacing-2"
+              href="{{ url_for('team') }}"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              class="ff-sans-cond uppercase text-white letter-spacing-2"
+              href="{{ url_for('team') }}"
+              >Team</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--MAIN-->
+    <main id="main" class="grid-container grid-container--home">
+      <div>
+        <video autoplay muted loop id="myVideo">
+          <source
+            src="{{ url_for('static', filename='bgvideo.mp4') }}"
+            type="video/mp4"
+          />
+        </video>
+        <h1
+          class="text-white fs-500 ff-sans-cond uppercase letter-spacing-1"
+          style="font-weight: 600"
+        >
+          We present to you <br />
+          <span
+            class="d-block fs-900 ff-serif text-white"
+            style="font-weight: 400"
+            >Space Traveler</span
+          >
+        </h1>
+        <button class="explore-btn">
+          <a href="#drag-and-drop-section"> Explore Now</a>
+        </button>
+      </div>
+    </main>
+    <!--DRAG & DROP-->
+    <section id="drag-and-drop-section">
+      <h2 class="ff-serif fs-600">Let AI Pave Your Orbit!</h2>
+      <p class="ff-sans fs-300">Drag&drop an image to detect space debris</p>
+      <!-- Upload  -->
+      <div id="drop-box">
+        <form
+          action="/predict"
+          method="POST"
+          id="file-upload-form"
+          class="uploader"
+          enctype="multipart/form-data"
+        >
+          <label for="file" class="file-upload-btn ff-sans-cond">
+            <img src="{{ url_for('static', filename='upload-icon.svg') }}" />
+            Upload Your Image
+            <input id="file" type="file" name="file" accept="image/*" hidden
+          /></label>
+
+          <dotlottie-wc
+            src="https://lottie.host/70c99039-0c90-4e7c-9346-8b3fc36cfca3/RCpJZJn5gk.lottie"
+            speed="1"
+            autoplay
+            loop
+          ></dotlottie-wc>
+
+          <button class="submit-btn ff-sans-cond" type="submit">Predict</button>
+        </form>
+      </div>
+    </section>
+
+    {% if result_img %}
+    <section id="results-section">
+      <div id="results-div" class="ff-serif">
+        <div id="original-img-div">
+          <h3>Original Image</h3>
+          <img
+            src="{{ url_for('static', filename=upload_img) }}"
+            alt="original image"
+            width="500"
+          />
+        </div>
+        <div id="prediction-img-div">
+          <h3>Prediction</h3>
+          <img
+            src="{{ url_for('static', filename=result_img) }}"
+            alt="Prediction Result"
+            width="500"
+          />
+        </div>
+      </div>
+    </section>
+    {% endif %}
+
+    <!--HISTORY-->
+    <!--  <div class="history-container">
+      <div class="timeline">
+        <div class="timeline-step">
+          <div class="dot"></div>
+          <div class="content">
+            <h3>Image 1</h3>
+            <p>Result:</p>
+            <p>Accuracy:</p>
+          </div>
+        </div>
+        <div class="timeline-step">
+          <div class="dot"></div>
+          <div class="content">
+            <h3>Image 2</h3>
+            <p>Result:</p>
+            <p>Accuracy:</p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </body>
+  <script src="navigation.js"></script>
+  <script src="scripts/script.js"></script>
+</html>

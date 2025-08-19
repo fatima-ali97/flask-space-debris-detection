@@ -1,0 +1,5 @@
+ultralytics
+pillow
+pandas
+pyyaml
+flask

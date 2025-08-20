@@ -4,6 +4,7 @@ note: Due to the model being VERY HUGE in size (~110MB) we will provide a link `
 
 ![demo](./demo.png)
 ![demo-upload](./demo-upload.png)
+![demo-result](./demo-result.png)
 
 ## Overview
 

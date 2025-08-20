@@ -1,0 +1,4 @@
+*.pt
+static/results/*
+static/uploads/*
+best.pt

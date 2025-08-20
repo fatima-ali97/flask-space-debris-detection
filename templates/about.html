@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+    <title>About</title>
+    <link
+      href="{{url_for('static',filename='about.css')}}"
+      rel="stylesheet"
+      type="text/css"
+    />
+     <link
+      href="{{url_for('static',filename='stylesheet.css')}}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    
+    <body>
+        <div class="header">
+            <header class="primary-header flex">
+                <nav>
+                    <ul
+                    id="primary-navigation"
+                    data-visible="false"
+                    class="primary-navigation underline-indicators flex"
+                    >
+                    <li>
+                        <a
+                        class="ff-sans-cond uppercase text-white letter-spacing-2"
+                        href=""
+                        >Home</a
+                        >
+                    </li>
+                    <li class="active">
+                        <a
+                        class="ff-sans-cond uppercase text-white letter-spacing-2"
+                        href="{{ url_for('about') }}"
+                        >About</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                        class="ff-sans-cond uppercase text-white letter-spacing-2"
+                        href="{{ url_for('team') }}"
+                        >Team</a
+                        >
+                    </li>
+                    </ul>
+                </nav>
+                </header>
+            <div class="title">
+                <h1  class="ff-serif">About</h1>
+                <br>
+                <h4  class="ff-serif">Lets explore more</h3>
+            </div>
+        </div>
+        <br>
+        <section class="project-idea">
+            <div class="idea">
+                <h2 class="ff-serif">Project concept</h2>
+                <br>
+                <p class="ff-serif">The project idea came from "Al-Mundhir" Bahrain's first satellite, was launched,
+                    which was designed and developed by Bahraini hands by engineers from the National
+                    Space Science Authority.
+                    <br>
+                    We decided to implement an AI space debris detector to help the National Space Science
+                    Authority to change the orbit of the satellite if there is any debris recognized in its
+                    direction utilizing the camera that is installed on the satellite.
+                </p>
+            </div>
+        </section>
+        <br>
+        <section class="info">
+            <div class="space-debri">
+                <h2 class="ff-serif">What is the space debris monitoring system?</h2>
+                <p class="ff-serif">The space debris monitoring system is a sophisticated network of technologies and procedures
+                    developed to ensure the safety and sustainability of Earth’s orbital environment.
+                    With the steady increase in satellite and spacecraft launches, the demand for advanced trackingcapabilities has
+                     grown more urgent than ever.
+                    <br>
+                    At its foundation, this system integrates multiple detection approaches to form a detailed
+                    view of orbital activity. These methods range from ground-based radar and optical telescopes
+                    to sensors positioned aboard satellites in space, working together to provide a comprehensive
+                     picture of the debris field. </p>
+            </div>
+        </section>
+        <br>
+        <section class="resourses">
+            <div class="resource">
+                <h2 class="ff-serif">Resources</h2>
+                <br>
+                <h3 class="ff-serif">Data sets</h3>
+                <ul>
+                    <li><a></a></li>
+                </ul>
+            </div>
+        </section>
+        <br>
+        <section class="developments">
+            <div class="developments">
+                <h2 class="ff-serif">Future Developments</h2>
+                <p class="ff-serif">A multi-class Debris classification to classify the type of debris(e.g.,
+                 satellite fragment, rocket body, paint fleck, micro-debris) to increase the
+                 usefulness of the model for different agencies(NASA, ESA, etc) who tracl object
+                 types differently. 
+                </p>
+            </div>
+        </section>
+        <br>
+        <section class="Thanks">
+            <div class="thanks">
+                <h2 class="ff-serif">Special Thanks for Mrs. Ayesha and Mr. Salman</h2>
+                <h3 class="ff-serif">for thier supervising and thier assist</h3>
+            </div>
+        </section>
+        <footer>
+            <h6 class="ff-serif">This work is presented as a final project for TechStride Program 2025</h4>
+        </footer>
+
+    </body>
+</html>

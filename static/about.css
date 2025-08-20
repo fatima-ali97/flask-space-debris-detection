@@ -1,0 +1,93 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/*---Header background--*/
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(galaxy-night-landscape.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+/*---Title--*/
+.title {
+  width: 100%;
+  top: 50%;
+  position: absolute;
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 62px;
+}
+
+.title h4 {
+  margin: 10px 0 40px;
+  font-size: 14px;
+}
+
+/*---Sections with same design---*/
+.idea,
+.space-debri,
+.resource,
+.developments {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+  height: 300px;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+p {
+  margin: 10px 10px 10px 10px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 30px;
+  width: 100%;
+  max-width: 1500px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.resource ul li {
+  list-style: none;
+}
+
+/*--Thanks--*/
+.thanks {
+  width: 80%;
+  margin: auto;
+  margin-top: 100px;
+  text-align: center;
+  padding-top: 100px;
+  height: 300px;
+}
+
+h3 {
+  font-size: 15px;
+  font-weight: 300px;
+}
+
+/*----Footer---*/
+footer {
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  justify-content: center;
+}

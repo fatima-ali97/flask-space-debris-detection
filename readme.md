@@ -1,6 +1,6 @@
 # Space Traveller
 
-note: Due to the model being VERY HUGE in size (~110MB) we will provide a link `.zip` folder containing all the code including the machine learning model.
+note: Due to the model being VERY HUGE in size (~110MB) we will provide a link to a `.zip` folder containing all the code including the machine learning model.
 
 ![demo](./demo.png)
 ![demo-upload](./demo-upload.png)
@@ -10,9 +10,12 @@ note: Due to the model being VERY HUGE in size (~110MB) we will provide a link `
 
 Space Traveller is a machine learning model that utilized YOLO to detect space debris.
 
-## Prerequisites
+## Source Code
 
 [click Here](https://drive.google.com/file/d/1Jfl5gpjhK-3JBitH1ylA8vP3dlVyG9Ke/view?usp=sharing) to download the full code.
+
+## Prerequisites
+
 Before running the Python script, ensure that you install required python libraries. You can typically do this using pip:
 
 ```bash
